@@ -1,2 +1,2 @@
-# TechBridge
-TechBridge. Providing a bridge between the developer, and the customer. Creating new developers, and helping them find work.
+# Nexus
+Nexus. Providing a central point where the developer and client meet. Creating new developers, and helping them find work.
