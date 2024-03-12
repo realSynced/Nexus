@@ -1,36 +1,109 @@
 import React from "react";
-import Link from "next/link";
-import { Icon } from '@iconify-icon/react';
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu} from "@nextui-org/react";
+import {ChevronDown, Lock, Activity, Flash, Server, TagUser, Scale} from "./Icons.jsx";
+import {AcmeLogo} from "./AcmeLogo.jsx";
 
-export default function Nav() {
-    return (
-        <div className="laptop:pl-20 tablet:pl-20 laptop:pr-20 tablet:pr-20 pl-5 pr-5 pt-5 ">
-            <div className="nav drop-shadow-xl">
-                    <nav className=" flex justify-between items-center p-4 bg-gradient-to-r from-black to-d-red text-white rounded-lg">
-                        <div>
-                            <Link href="/" className="hidden laptop:contents tablet:contents">
-                                Dakidd Fuego
-                            </Link>
-                            <Link href="/" className="laptop:hidden tablet:hidden">
-                                Fuego
-                            </Link>
-                        </div>
-                        <div>
-                            <ul className="flex space-x-4">
-                                <li>
-                                    <Link href="/music" className=" inline-flex laptop:mr-12 tablet:mr-12 transition ease-in-ease-out duration-300 hover:scale-110 hover:cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M17.05 20.28c-.98.95-2.05.8-3.08.35c-1.09-.46-2.09-.48-3.24 0c-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8c1.18-.24 2.31-.93 3.57-.84c1.51.12 2.65.72 3.4 1.8c-3.12 1.87-2.38 5.98.48 7.13c-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25c.29 2.58-2.34 4.5-3.74 4.25"></path></svg>
-                                        Music
-                                    </Link>
-                                    <Link href="/about" className="inline-flex transition ease-in-ease-out duration-300 hover:scale-110">
-                                    <svg width="1.2em" height="1.5em" viewBox=""><path fill="currentColor" d=""></path></svg>
-                                        About
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-            </div>
-        </div>
-    );
+export default function App() {
+  const icons = {
+    chevron: <ChevronDown fill="currentColor" size={16} />,
+    scale: <Scale className="text-warning" fill="currentColor" size={30} />,
+    lock: <Lock className="text-success" fill="currentColor" size={30} />,
+    activity: <Activity className="text-secondary" fill="currentColor" size={30} />,
+    flash: <Flash className="text-primary" fill="currentColor" size={30} />,
+    server: <Server className="text-success" fill="currentColor" size={30} />,
+    user: <TagUser className="text-danger" fill="currentColor" size={30} />,
+  };
+
+  return (
+    <Navbar isBordered>
+      <NavbarBrand>
+        <AcmeLogo />
+        <p className="font-bold text-inherit"><Link href="/">Nexus</Link></p>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Button
+                disableRipple
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                endContent={icons.chevron}
+                radius="sm"
+                variant="light"
+              >
+                Learn More
+              </Button>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            aria-label="ACME features"
+            className="w-[340px]"
+            itemClasses={{
+              base: "gap-4",
+            }}
+          >
+            <DropdownItem
+              key="autoscaling"
+              description="ACME scales apps to meet user demand, automagically, based on load."
+              startContent={icons.scale}
+            >
+              Autoscaling
+            </DropdownItem>
+            <DropdownItem
+              key="usage_metrics"
+              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
+              startContent={icons.activity}
+            >
+              Usage Metrics
+            </DropdownItem>
+            <DropdownItem
+              key="production_ready"
+              description="ACME runs on ACME, join us and others serving requests at web scale."
+              startContent={icons.flash}
+            >
+              Production Ready
+            </DropdownItem>
+            <DropdownItem
+              key="99_uptime"
+              description="Applications stay on the grid with high availability and high uptime guarantees."
+              startContent={icons.server}
+            >
+              +99% Uptime
+            </DropdownItem>
+            <DropdownItem
+              key="supreme_support"
+              description="Overcome any challenge with a supporting team ready to respond."
+              startContent={icons.user}
+            >
+              +Supreme Support
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Marketplace
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Connect
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          {/* <Link href="/accounts/login">Login</Link> */}
+
+          <Button as={Link} color="primary" href="/accounts/login" variant="flat">
+            Login
+          </Button>
+        </NavbarItem>
+        <NavbarItem>
+        <Button as={Link} color="primary" href="/accounts/signup" variant="flat">
+            Sign Up
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
+  );
 }

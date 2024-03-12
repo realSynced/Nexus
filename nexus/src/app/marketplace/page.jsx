@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar"
 import { oxanium } from "./fonts"
 import { useState, useEffect } from "react";
 
-export default function Home() {
+export default function Marketplace() {
 
 
   return (
