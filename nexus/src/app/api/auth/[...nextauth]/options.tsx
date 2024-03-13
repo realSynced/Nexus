@@ -1,6 +1,11 @@
 import type { NextAuthOptions } from "next-auth";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
+import LoginPg from "@/app/accounts/login/page"
+import React from "react";
+
+
+let check: boolean = false;
 
 export const options: NextAuthOptions = {
   session: {
@@ -20,6 +25,7 @@ export const options: NextAuthOptions = {
           password: string;
         };
         if (email !== "john@example.com" || password !== "pass") {
+          check = true;
           throw new Error("Invalid email or password");
         }
 

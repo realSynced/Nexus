@@ -5,10 +5,14 @@ import Link from "next/link";
 import { oxanium } from "@/app/fonts";
 import { signIn } from "next-auth/react";
 import { FormEventHandler, useState } from "react";
+// import { ifTrue } from '@/app/api/auth/[...nextauth]/options';
 // import { providers, getSession, csrfToken } from "next-auth";
 
-
 // export default function LoginPage
+
+
+
+
 
 export default function LoginPage() {
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
@@ -19,11 +23,16 @@ export default function LoginPage() {
     const res = await signIn("credentials", {
       email: userInfo.email,
       password: userInfo.password,
-      redirect: false,
+      redirect: true,
     });
 
     console.log(res)
   };
+  
+  const [wrongCreds, setWrongCreds] = useState("");
+
+  
+
 
   return (
     <>
@@ -62,8 +71,8 @@ export default function LoginPage() {
                 }
                 type="password"
                 placeholder="Password"
-              ></input>
-
+              >
+              </input>
               <Link href="/accounts/signup" className="text-blue-500 hover:underline">
                 Register</Link>
               <input
@@ -78,21 +87,3 @@ export default function LoginPage() {
     </>
   );
 }
-
-// LoginForm.getInitialProps = async (context) => {
-//   const { req, res } = context;
-//   const session = await getSession({ req });
-
-//   if (session && res && session.accesstoken) {
-//     res.writeHead(302, {
-//       Location: "/",
-//     });
-//     res.end();
-//     return;
-//   }
-//   return {
-//     session: undefined,
-//     providers: await providers(context),
-//     // csrfToken: await csrfToken(context)
-//   };
-// };
