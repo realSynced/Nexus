@@ -3,12 +3,10 @@ import Navbar from "@/app/components/Navbar";
 import LoginForm from "./login-form";
 import Link from "next/link";
 import { oxanium } from "@/app/fonts";
-import { NextPage } from "next";
 import { signIn } from "next-auth/react";
 import { FormEventHandler, useState } from "react";
-import { providers, getSession, csrfToken } from "next-auth";
+// import { providers, getSession, csrfToken } from "next-auth";
 
-interface Props {}
 
 // export default function LoginPage
 
@@ -23,6 +21,8 @@ export default function LoginPage() {
       password: userInfo.password,
       redirect: false,
     });
+
+    console.log(res)
   };
 
   return (
@@ -63,6 +63,9 @@ export default function LoginPage() {
                 type="password"
                 placeholder="Password"
               ></input>
+
+              <Link href="/accounts/signup" className="text-blue-500 hover:underline">
+                Register</Link>
               <input
                 type="submit"
                 value="Login"
@@ -76,20 +79,20 @@ export default function LoginPage() {
   );
 }
 
-LoginForm.getInitialProps = async (context) => {
-  const { req, res } = context;
-  const session = await getSession({ req });
+// LoginForm.getInitialProps = async (context) => {
+//   const { req, res } = context;
+//   const session = await getSession({ req });
 
-  if (session && res && session.accesstoken) {
-    res.writeHead(302, {
-      Location: "/",
-    });
-    res.end();
-    return;
-  }
-  return {
-    session: undefined,
-    providers: await providers(context),
-    // csrfToken: await csrfToken(context)
-  };
-};
+//   if (session && res && session.accesstoken) {
+//     res.writeHead(302, {
+//       Location: "/",
+//     });
+//     res.end();
+//     return;
+//   }
+//   return {
+//     session: undefined,
+//     providers: await providers(context),
+//     // csrfToken: await csrfToken(context)
+//   };
+// };
