@@ -1,6 +1,6 @@
 'use client'
-import Navbar from "./components/Navbar"
-import { oxanium } from "./fonts"
+import Navbar from "@/app/components/Navbar"
+import { oxanium } from "@/app/fonts"
 import { useState, useEffect } from "react";
 
 export default function Marketplace() {
@@ -12,7 +12,7 @@ export default function Marketplace() {
       <section className={`${oxanium.className} flex h-dvh justify-center items-center text-center text-8xl`}>
           
           <div className={`mb-18`}>
-            <h1>Nexus</h1>
+            <h1>Marketplace</h1>
             <p className="text-4xl">&lt;A center for developers/&gt;</p>
           </div>
       </section>

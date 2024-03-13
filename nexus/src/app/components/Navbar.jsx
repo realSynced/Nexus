@@ -80,7 +80,7 @@ export default function App() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link href="/marketplace" aria-current="page">
             Marketplace
           </Link>
         </NavbarItem>
