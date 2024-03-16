@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {Providers} from "./providers";
-import { SessionProvider } from "next-auth/react";
-import Link from "next/link";
 import Navbar from "@/app/ui/navbar"
 import "./globals.css";
-import { getServerSession } from "next-auth";
-import Logout from "@/app/ui/logout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,17 +16,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const session = await getServerSession();
+  
   return (
     <html lang="en">
       <body className={inter.className}>
         <main className="min-h-screen bg-gradient-to-tr from-white to-gray-300">
-        {/* <SessionProvider session={session}> */}
-        
+
           <Navbar/>
-        
+
           {children}
-        {/* </SessionProvider> */}
+
         </main>
       </body>
     </html>

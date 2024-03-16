@@ -1,11 +1,6 @@
-// import { se } from "@/app/api/auth/[...nextauth]/route";
-
-import { GetSessionParams, getSession } from "next-auth/react";
-// import  {getUserInfo} from "@/app/api/auth/[...nextauth]/route";
 
 
-
-export default async function Dashboard() {
+export default function Dashboard() {
 
   // const session = await getSession({req})
     // const userInfo = await getUserInfo();
@@ -52,23 +47,3 @@ export default async function Dashboard() {
         </div>
     );
 }
-
-// export async function getServerSideProps(context: GetSessionParams | undefined) {
-//   const session = await getSession(context);
-
-//   if (!session) {
-//     // Redirect the user to login page or handle unauthenticated users
-//     return {
-//       redirect: {
-//         destination: '/login',
-//         permanent: false,
-//       },
-//     };
-//   }
-
-//   return {
-//     props: {
-//       username: session && session.user && session.user.username || '', // Accessing the username field or providing a default value
-//     },
-//   };
-// }

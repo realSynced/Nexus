@@ -16,10 +16,6 @@ export default function Logout() {
         signOut();
     };
 
-    function switchPg( path: string){
-        redirect(path);
-    }
-
 
     return (
         <>
