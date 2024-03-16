@@ -1,14 +1,20 @@
-import { userInfo } from "@/app/api/auth/[...nextauth]/route";
+// import { se } from "@/app/api/auth/[...nextauth]/route";
+
+import { getSession } from "next-auth/react";
+import  {getUserInfo} from "@/app/api/auth/[...nextauth]/route";
 
 
 
-export default function Dashboard() {
+export default async function Dashboard() {
+
+  // const session = await getSession({req})
+    const userInfo = await getUserInfo();
     return (
         <div className=" rounded-lg space-y-6 p-10 pb-16 md:block md:h-svh bg-gradient-to-tr from-white to-gray-200">
           <div className="space-y-0.5">
             <h2 className="text-2xl font-bold tracking-tight">Dashboard</h2>
             <p className="text-muted-foreground">
-              Welcome { userInfo.username }!
+              Welcome {userInfo.username}!
             </p>
           </div>
 

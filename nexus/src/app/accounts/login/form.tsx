@@ -16,7 +16,8 @@ export default function Form(){
           password: formData.get('password'),
           redirect: false,
         });
-        console.log({ response })
+        // console.log({ response })
+        // console.log("testt")
 
         if(!response?.error){
             router.push("/dashboard");

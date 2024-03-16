@@ -26,7 +26,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <main className="min-h-screen bg-gradient-to-tr from-white to-gray-300">
-          {/* <SessionProvider> */}
+        {/* <SessionProvider session={session}> */}
         
           <Navbar/>
         
