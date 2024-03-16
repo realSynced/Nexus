@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <Navbar/>
+      {/* <Navbar/> */}
       <section className={`${oxanium.className} flex h-dvh justify-center items-center text-center text-8xl`}>
           
           <div className={`mb-18`}>

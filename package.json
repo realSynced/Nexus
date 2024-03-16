@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "next-auth": "^4.24.7"
+    "@vercel/postgres": "^0.7.2",
+    "next-auth": "^4.24.7",
+    "some-library": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2"
   }
 }
