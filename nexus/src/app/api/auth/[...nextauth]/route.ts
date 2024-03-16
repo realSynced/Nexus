@@ -3,6 +3,13 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { compare } from "bcrypt";
 import { sql } from "@vercel/postgres";
 
+export let userInfo = {
+    username: "",
+    email: "",
+    password: ""
+
+}
+
 const handler = NextAuth({
         session: {
             strategy: 'jwt',
@@ -26,9 +33,12 @@ const handler = NextAuth({
 
                     const passwordCorrect = await compare(credentials?.password || " ", user.password);
 
-                    console.log({passwordCorrect})
+                    console.log({passwordCorrect, credentials})
 
                     if(passwordCorrect){
+                        userInfo.username = user.username;
+                        userInfo.email = user.email;
+                        userInfo.password = user.password;
                         return {
                             id: user.id,
                             username: user.username,
@@ -45,3 +55,4 @@ const handler = NextAuth({
         },
 })
 export {handler as GET, handler as POST}
+

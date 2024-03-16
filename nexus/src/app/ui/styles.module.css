@@ -1,0 +1,23 @@
+.arrow {
+    transform: translateX(0rem);
+    transition: transform 0.2s ease-in-out; /* Adjust the transition timing here */
+}
+
+.arrow:hover svg {
+    transform: translateX(0.5rem);
+    transition: transform 0.2s ease-in-out; /* Add transition to the SVG element */
+}
+
+
+.inf {
+    animation: slide 2s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1rem); /* Adjust the distance as needed */
+    }
+}

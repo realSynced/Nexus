@@ -1,3 +1,4 @@
+import { userInfo } from "@/app/api/auth/[...nextauth]/route";
 
 
 
@@ -7,7 +8,7 @@ export default function Dashboard() {
           <div className="space-y-0.5">
             <h2 className="text-2xl font-bold tracking-tight">Dashboard</h2>
             <p className="text-muted-foreground">
-              Welcome [insert username]!
+              Welcome { userInfo.username }!
             </p>
           </div>
 
