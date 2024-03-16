@@ -1,5 +1,4 @@
 'use client'
-import Navbar from "@/app/components/Navbar"
 import { oxanium } from "@/app/fonts"
 import { useState, useEffect } from "react";
 

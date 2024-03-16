@@ -1,7 +1,6 @@
 'use client'
-import Navbar from "@/app/components/Navbar"
 import Link from "next/link";
-import { oxanium } from "@/app/fonts"
+import { oxanium } from "@/app/ui/fonts"
 import { useState, useEffect } from "react";
 
 export default function Settings() {
