@@ -1,11 +1,13 @@
 
+
+
 export default function Dashboard() {
     return (
-        <div className="space-y-6 p-10 pb-16 md:block md:h-svh bg-gray-200">
+        <div className=" rounded-lg space-y-6 p-10 pb-16 md:block md:h-svh bg-gradient-to-tr from-white to-gray-200">
           <div className="space-y-0.5">
             <h2 className="text-2xl font-bold tracking-tight">Dashboard</h2>
             <p className="text-muted-foreground">
-              Welcome [insert username]
+              Welcome [insert username]!
             </p>
           </div>
 

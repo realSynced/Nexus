@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 
+
 export default function Form(){
     const router = useRouter()
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -40,7 +41,7 @@ export default function Form(){
                                     Password
                                 </label>
                                 <input name="password" placeholder="password123" type="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-                                <a href="/accounts/signup" className="text-blue-500 hover:underline">Already a member?</a>
+                                <a href="/accounts/signup" className="text-blue-500 hover:underline">Not a member?</a>
                                 <button type="submit" className="mt-4 justify-center w-full bg-slate-500 transition-colors duration-150 ease-in-out hover:bg-slate-700 text-white font-bold py-2 px-4 rounded hover:cursor-pointer">Login</button>
                             </div>
                         </form>

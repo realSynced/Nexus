@@ -1,0 +1,12 @@
+xx  .navbar {
+    transition: 500ms ease;
+    height: 50px;
+    position: fixed;
+    background: red;
+    width: 100%;
+  }
+  
+  .navbar-scrolled {
+    background: #000;
+  }
+  

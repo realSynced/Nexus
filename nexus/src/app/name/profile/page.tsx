@@ -1,6 +1,6 @@
 'use client'
 import Navbar from "@/app/components/Navbar"
-import { oxanium } from "@/app/fonts"
+import { oxanium } from "@/app/ui/fonts"
 import { useState, useEffect } from "react";
 
 export default function Profile() {

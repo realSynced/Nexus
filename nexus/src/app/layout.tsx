@@ -3,9 +3,10 @@ import { Inter } from "next/font/google";
 import {Providers} from "./providers";
 import { SessionProvider } from "next-auth/react";
 import Link from "next/link";
+import Navbar from "@/app/ui/navbar"
 import "./globals.css";
 import { getServerSession } from "next-auth";
-import Logout from "@/app/logout";
+import Logout from "@/app/ui/logout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,24 +25,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <main className="min-h-screen bg-gradient-to-tr from-white to-gray-300">
+          {/* <SessionProvider> */}
         
-        {/* <SessionProvider> */}
-          <Providers>
-          <nav>
-          {!!session &&
-          <span>
-            <Logout/>
-          </span>
-          }
-          {!session &&
-          <span className="text-white text-5xl">
-            <Link href="/accounts/login">Login</Link>
-          </span>
-          }
-        </nav>
-              {children}
-          </Providers>
+          <Navbar/>
+        
+          {children}
         {/* </SessionProvider> */}
+        </main>
       </body>
     </html>
   );
