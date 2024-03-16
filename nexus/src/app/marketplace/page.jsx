@@ -1,6 +1,5 @@
 'use client'
-import { oxanium } from "@/app/fonts"
-import { useState, useEffect } from "react";
+import { oxanium } from "@/app/ui/fonts"
 
 export default function Marketplace() {
 
