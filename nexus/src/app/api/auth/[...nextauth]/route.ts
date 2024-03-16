@@ -31,9 +31,9 @@ const  handler = NextAuth({
                     console.log({passwordCorrect, credentials})
 
                     if(passwordCorrect){
-                        userInfo.username = user.username;
-                        userInfo.email = user.email;
-                        userInfo.password = user.password;
+                        // userInfo.username = user.username;
+                        // userInfo.email = user.email;
+                        // userInfo.password = user.password;
                         return {
                             id: user.id,
                             username: user.username,
@@ -50,13 +50,3 @@ const  handler = NextAuth({
         },
 })
 export {handler as GET, handler as POST}
-
-let userInfo = {
-    username: "",
-    email: "",
-    password: ""
-}
-
-export function getUserInfo(){
-    return userInfo;
-}
