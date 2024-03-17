@@ -7,16 +7,16 @@ import styles from "@/app/ui/styles.module.css";
 
 export default function Home() {
   return (
-    <div className={` slategray min-h-screen`}>
+    <div className="flex flex-col bg slategray min-h-screen">
       <section className={`${oxanium.className} flex h-svh justify-center items-center text-center text-8xl`}>
         <div className="flex flex-row space-x-10 ">
-          <div className={`px-96`}>
+          <div className="px-96">
             <h1>A home for developers.</h1>
             {/* <p className="text-2xl">A point of connection</p> */}
             <p className="text-2xl">Learn. Create. Explore.</p>
           </div>
         </div>
-        {/* &lt; < left  &gt; > right */}
+        
       </section>
       
       <section className={`${oxanium.className} bg-gradient-to-b from-transparent to-blue-500 bg-opacity-50 flex h-svh justify-center text-center text-3xl`}>
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
         </div>
-        {/* &lt; < left  &gt; > right */}
+        
       </section>
     </div>
   );
