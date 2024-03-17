@@ -20,7 +20,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
-        <main className="min-h-screen bg-gradient-to-tr from-white to-gray-300 overflow-y-auto">
+        <main className="min-h-screen bg-gradient-to-tr from-white to-gray-300">
 
           <Navbar/>
 
