@@ -13,7 +13,7 @@ export default async function Navbarr() {
     
     <div className={`${oxanium.className} sticky top-4 z-50 px-12`}>
       <div className="">
-        <nav className="rounded-full px-12 bg-white bg-opacity-70">
+        <nav className="rounded-full px-12 bg-white bg-opacity-70 border border-black">
           <div className="flex  items-center ">
             <div className="px-4 py-4">
               <Link href="/" className={`${styles.arrow} font-bold flex`}>

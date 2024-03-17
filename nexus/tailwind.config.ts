@@ -33,6 +33,7 @@ const config: Config = {
       plugins: [nextui()]
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
 export default config;
