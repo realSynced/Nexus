@@ -1,30 +1,31 @@
-"use client";
+// "use client";
+import { Metadata } from "next";
 import Navbar from "@/app/ui/navbar";
 import { oxanium } from "@/app/ui/fonts";
 import { Icon } from '@iconify-icon/react';
 import Link from "next/link"
 import styles from "@/app/ui/styles.module.css";
 
-
+ 
+export const metadata: Metadata = {
+  title: 'Nexus | Home',
+};
 // Icons: https://icons8.com/icons
 
 export default function Home() {
   return (
     <div className="flex flex-col bg slategray min-h-screen">
+      {/* <Navbar/> */}
       <section className={`${oxanium.className} flex flex-col h-svh justify-center items-center text-center text-8xl`}>
-        <div className="border border-y-1 border-dashed border-b-0 border-opacity-50 border-gray-600">  ‎  </div>
         <div className="flex flex-col space-x-10  ">
           <div className="">
             <div className="flex border border-gray-600 border-dashed border-opacity-50 border-x-0">
                 
                 <h1 className="font-bold  p-4 text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-black">A home for developers, market for recruiters</h1>
-                <div className="border border-y-1 border-dashed border-b-0 border-opacity-50 border-gray-600"> ‎  </div>
               </div>
             <div className="border border-gray-600 border-dashed border-t-0 border-x-0 border-opacity-50"><p className="text-2xl ">Learn. Create. Explore.</p></div>
           </div>
-        </div>
-        <div className="border border-y-1 border-dashed border-b-0 border-opacity-50 border-gray-600"> ‎  </div>
-        
+        </div>        
       </section>
       
       <section className={`${oxanium.className} bg-gradient-to-b from-transparent to-blue-500 bg-opacity-50 flex h-auto md:h-svh justify-center text-center text-3xl`}>

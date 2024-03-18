@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-
+import Navbar from "@/app/ui/navbar";
 import Form from "@/app/accounts/login/form";
 
 
@@ -9,7 +9,8 @@ export default async function LoginPage() {
   if(session){
     redirect("/dashboard");
   }
-  return (
+  return (<>
+    {/* <Navbar/> */}
     <Form />
-  );
+  </>);
 }
