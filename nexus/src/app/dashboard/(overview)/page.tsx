@@ -6,11 +6,16 @@ import { useSession } from "next-auth/react"
 export default function Dashboard() {
   const { data: session, status } = useSession();
 
-  const email = () => {
-    if(session?.user.email === null){
-      return;
-    }
-  }
+  const getEmail = () => {
+    if (!session) return null; // Return null if session is not available
+
+    const userEmail = session.user?.email; // Using optional chaining to safely access email
+    if (!userEmail) return "Guest"; // Return a default value if email is not available
+
+    return userEmail; // Return the email if available
+  };
+
+  const email = getEmail();
 
   // const session = await getSession({req})
     // const userInfo = await getUserInfo();

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { oxanium } from "@/app/ui/fonts";
-import { getSeverSession } from "next-auth";
+import { getServerSession } from "next-auth";
 import Logout from "@/app/ui/logout";
 import RegSign from "@/app/ui/reg-sign";
 import styles from "@/app/ui/styles.module.css";
@@ -12,7 +12,7 @@ export default function Navbarr() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const sessionData = await getServerSession();
+      const sessionData = await getSession();
       setSession(sessionData);
     };
 
@@ -23,7 +23,7 @@ export default function Navbarr() {
     <div className={`${oxanium.className} sticky top-4 z-50 px-12`}>
       <div className="">
         <nav className="rounded-full px-12 bg-white bg-opacity-70 border border-black">
-          <div className="flex  items-center ">
+          <div className="flex items-center">
             <div className="px-4 py-4">
               <Link href="/" className={`${styles.arrow} font-bold flex`}>
                 Nexus
