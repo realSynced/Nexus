@@ -14,9 +14,9 @@ export default function Navbarr() {
     const fetchData = async () => {
       const sessionData = await getServerSession();
       if(sessionData == null){
-        setSession(false);
-      } else {
         setSession(true);
+      } else {
+        setSession(false);
       }
     };
 
