@@ -15,13 +15,14 @@ export default function Navbarr() {
       const sessionData = await getServerSession();
       if(sessionData == null){
         setSession(false);
-      }else {
+      } else {
         setSession(true);
       }
     };
 
     fetchData();
-  }, [session]);
+  }, []);
+
 
   return (
     <div className={`${oxanium.className} sticky top-4 z-50 px-12`}>
@@ -70,8 +71,8 @@ export default function Navbarr() {
               </Link>
             </div>
 
-            {!session && <Logout />}
             {!!session && <RegSign />}
+            {!session && <Logout />}
           </div>
         </nav>
       </div>
