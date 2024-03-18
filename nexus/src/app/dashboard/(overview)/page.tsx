@@ -4,7 +4,13 @@ import { useSession } from "next-auth/react"
 
 
 export default function Dashboard() {
-  const { data: session, status } = useSession()
+  const { data: session, status } = useSession();
+
+  const email = () => {
+    if(session?.user.email === null){
+      return;
+    }
+  }
 
   // const session = await getSession({req})
     // const userInfo = await getUserInfo();
