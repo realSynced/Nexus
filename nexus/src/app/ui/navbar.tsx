@@ -21,7 +21,7 @@ export default function Navbarr() {
     };
 
     fetchData();
-  }, []);
+  }, );
 
   return (
     <div className={`${oxanium.className} sticky top-4 z-50 px-12`}>
