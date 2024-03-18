@@ -8,7 +8,7 @@ import RegSign from "@/app/ui/reg-sign";
 import styles from "@/app/ui/styles.module.css";
 
 export default function Navbarr() {
-  const [session, setSession] = useState(null);
+  const [session, setSession] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
