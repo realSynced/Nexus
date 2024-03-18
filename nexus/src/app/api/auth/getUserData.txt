@@ -1,0 +1,32 @@
+// pages/api/getUserData.js
+import { getServerSession } from 'next-auth/client';
+
+export default async function handler(req, res) {
+  const session = await getServerSession({ req });
+
+  if (!session) {
+    res.status(401).json({ error: 'You must be logged in to access this resource' });
+    return;
+  }
+
+  // Assuming you have a function to fetch user data based on session.user.id
+  const userData = await fetchUserData(session.user.email);
+
+  if (userData) {
+    res.status(200).json(userData);
+  } else {
+    res.status(404).json({ error: 'User data not found' });
+  }
+}
+
+async function fetchUserData(userId) {
+  // Implement your logic to fetch user data here.
+  // You can use any database or external API to retrieve user data.
+  // This is just a placeholder function.
+  // Example: const userData = await db.getUserById(userId);
+  const userData = {
+    email: 'john@example.com',
+    // Add more user properties as needed
+  };
+  return userData;
+}
