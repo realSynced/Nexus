@@ -16,7 +16,7 @@ export default function Navbarr() {
       if(sessionData == null){
         setSession(false);
       }else {
-        sessionData(true);
+        setSession(true);
       }
     };
 
