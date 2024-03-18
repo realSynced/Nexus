@@ -12,7 +12,7 @@ export default function Navbarr() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const sessionData = await getSession();
+      const sessionData = await getServerSession();
       setSession(sessionData);
     };
 
