@@ -25,7 +25,7 @@ export default function Dashboard() {
           <div className="space-y-0.5">
             <h2 className="text-2xl font-bold tracking-tight">Dashboard</h2>
             <p className="text-muted-foreground">
-              Welcome {session?.user.email}!
+              Welcome {email}!
             </p>
           </div>
 
