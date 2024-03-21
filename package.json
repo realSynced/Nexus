@@ -6,6 +6,7 @@
     "some-library": "^1.0.0"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2"
+    "@types/bcrypt": "^5.0.2",
+    "daisyui": "^4.7.3"
   }
 }
