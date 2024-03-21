@@ -8,7 +8,7 @@ export default function Profile() {
   const [username, setUsername] = useState("Loading");
   
   useEffect(() => {
-    fetch("https://hp3rsf-3001.csb.app/api/userdata?email=john@example.com").then(
+    fetch("https://nexusapibackend.netlify.app/.netlify/functions/api/userdata").then(
       response => response.json()
     ).then(
       data => {
