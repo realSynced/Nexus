@@ -20,7 +20,7 @@ export default function Form(){
         // console.log("testt")
 
         if(!response?.error){
-            router.push("/dashboard");
+            router.push("/profile");
             router.refresh();
         }
     }

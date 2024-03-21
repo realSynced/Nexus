@@ -1,7 +1,6 @@
 'use client'
 import { Metadata } from 'next';
 import { SessionProvider } from "next-auth/react";
-import Navbar from "@/app/ui/navbar"
 import SideNav from '@/app/dashboard/ui/sidenav';
 
 
