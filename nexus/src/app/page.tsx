@@ -4,7 +4,6 @@
 import { Theme, Button } from 'react-daisyui'
 import Navbar from "@/app/ui/navbar";
 import { oxanium } from "@/app/ui/fonts";
-import { Icon } from '@iconify-icon/react';
 import MainSection from "@/app/ui/landing-sections/section1";
 import SecondarySection from "@/app/ui/landing-sections/section2";
 import "animate.css/animate.min.css";

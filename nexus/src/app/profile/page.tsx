@@ -1,19 +1,21 @@
 'use client'
 import { useState, useEffect } from "react";
-import ProfilePic from "@/app/profile/ui/profile-pic";
-import Link from "next/link";
+import Socials from "@/app/profile/ui/socials"
+// import ProfilePic from "@/app/profile/ui/profile-pic";
+import { useSession } from "next-auth/react"
+
 
 export default function Profile() {
-
+  const { data: session, status } = useSession()
   const [username, setUsername] = useState("Loading");
   
   useEffect(() => {
-    fetch("https://nexusapibackend.netlify.app/.netlify/functions/api/userdata").then(
+    fetch("/api/userdata").then(
       response => response.json()
     ).then(
       data => {
         console.log(data);
-        setUsername(data.user[0].username);
+        setUsername(data.result.rows[0].username);
         // setUrl(data.url);
       }
     ).catch(error => {
@@ -25,11 +27,34 @@ export default function Profile() {
 
   return (
     <div className="min-h-screen h-lvh ">
-      <div className="grid grid-rows-3 grid-cols-3 px-4 pt-4">
-        <div>
-          <div className="text-4xl bg-neutral-content p-4 rounded-lg">
-            <h1>@ {username} profile</h1>
+      <div className="flex flex-rows px-4 pt-4">
+        <div className="flex flex-col space-y-5">
+          
+          
+          <div className="flex items-center space-x-2 w-6/7 text-4xl bg-neutral-content p-4 rounded-lg font-bold">
+              <div className="w-14 h-14 rounded-full">
+                <img  className="w-22 rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            
+            <h1>@{username}'s profile</h1>
+            {/* <p>Email:</p> */}
           </div>
+          
+            
+          <div className="flex space-x-2 text-2xl">
+            
+            <div className="bg-neutral-100 p-4 py-2 rounded-lg">
+              <h1 className="font-semibold">About</h1>
+              <p className="text-xl">Hello! Welcome to my profile.</p>
+            </div>
+            <div className="bg-neutral-100 p-4 py-2 rounded-lg">
+              <h1 className="font-semibold">Interests</h1>
+              <p className="text-xl">I am interested in NextJS and React</p>
+            </div>
+          </div>
+          <div className="mr-auto">
+              <Socials/>
+          </div>  
 
         </div>
       
