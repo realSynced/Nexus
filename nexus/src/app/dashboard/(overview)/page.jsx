@@ -1,32 +1,15 @@
-import { Console } from 'console';
-import dynamic from 'next/dynamic'
-
 // https://nexusapibackend.netlify.app/.netlify/functions/api/userdata
 
 export default function Dashboard() {
   
-  const [username, setUsername] = useState("Loading");
-  let userData;
   
-  useEffect(() => {
-    fetch("https://nexusapibackend.netlify.app/.netlify/functions/api/userdata").then(
-      response => response.json(),
-      response => response.user.username
-    ).then(
-      data => {
-        console.log(data);
-        setMessage(data);
-        // setUrl(data.url);
-      }
-    )
-  }, []);
 
   return (
     <div className="rounded-lg space-y-6 p-10 pb-16 md:block md:h-svh bg-gradient-to-tr from-white to-gray-200">
       <div className="space-y-0.5">
         <h2 className="text-2xl font-bold tracking-tight">Dashboard</h2>
         <p className="text-muted-foreground">
-          Welcome! {username}
+          Welcome!
         </p>
       </div>
 
