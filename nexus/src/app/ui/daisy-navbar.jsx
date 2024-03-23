@@ -16,16 +16,19 @@ export default async function Navbar() {
 
             <div className="flex flex-grow">
                 <div className="">
-                    <a className="btn btn-ghost text-xl" href="/community">Communities</a>
+                    <a className="btn btn-ghost btn-md text-lg" href="/community">Communities</a>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost text-xl" href="/marketplace">Marketplace</a>
+                    <a className="btn btn-ghost btn-md text-lg" href="/marketplace">Marketplace</a>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost text-xl" href="/jobs">Find Jobs/Gigs</a>
+                    <a className="btn btn-ghost btn-md text-lg" href="/jobs">Learn</a>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost text-xl" href="/mission">Our Mission</a>
+                    <a className="btn btn-ghost btn-md text-lg" href="/jobs">Jobs</a>
+                </div>
+                <div className="">
+                    <a className="btn btn-ghost btn-md text-lg" href="/mission">Our Mission</a>
                 </div>
             </div>
 
