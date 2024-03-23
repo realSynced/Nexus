@@ -23,6 +23,9 @@ export default function SignInOut() {
                             <span className="badge">New</span>
                         </Link>
                         </li>
+                        <li><Link href="settings">Overview</Link></li>
+                        <li><Link href="settings">Your Courses</Link></li>
+                        <li><Link href="settings">Notifications</Link></li>
                         <li><Link href="settings">Settings</Link></li>
                         <li><Link href="" onClick={handleSignOut}>Logout</Link></li>
                     </ul>

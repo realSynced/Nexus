@@ -9,13 +9,28 @@ import LoggedIn from "@/app/ui/user-session/logged-in"
 export default async function Navbar() {
     const session = await getServerSession();
     return (
-    // <Theme dataTheme='corporate'>
-        <div className="z-20 navbar bg-base-100 flex space-x-5 sticky top-0 drop-shadow-md">
+        <div className="z-20 navbar bg-base-100 flex justify-between space-x-5 sticky top-0 drop-shadow-md">
             <div className="flex-1">
                 <a className="btn btn-ghost text-xl" href="/">Nexus</a>
             </div>
+
+            <div className="flex flex-grow">
+                <div className="">
+                    <a className="btn btn-ghost text-xl" href="/community">Communities</a>
+                </div>
+                <div className="">
+                    <a className="btn btn-ghost text-xl" href="/marketplace">Marketplace</a>
+                </div>
+                <div className="">
+                    <a className="btn btn-ghost text-xl" href="/jobs">Find Jobs/Gigs</a>
+                </div>
+                <div className="">
+                    <a className="btn btn-ghost text-xl" href="/mission">Our Mission</a>
+                </div>
+            </div>
+
             {!session && <>
-            <div className="flex-none">
+            <div className="ml-auto">
                 <Link className="btn btn-ghost btn-md text-lg" href="/accounts/signup">Sign Up</Link>
             </div>
             <div className="flex-none ml-2 ">
@@ -28,6 +43,5 @@ export default async function Navbar() {
             </>
             }
         </div>
-    // </Theme>
     )
 }
