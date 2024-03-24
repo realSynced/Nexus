@@ -29,8 +29,10 @@ export default function SecondarySection() {
                 <div className="flex justify-center pb-4">
                   <Image src={Community} width={'60'} height={'60'} />
                 </div>
-                <h1 className="text-xl font-semibold">Communities</h1>
-                <p className="text-lg text-neutral-400">Various amount of groups.</p>
+                <h1 className="text-xl font-semibold">Courses</h1>
+                <p className="text-lg text-neutral-400">
+                  Homemade courses, catered to your needs. Providing endless opportunities for growth and 'aha' moments.
+                </p>
               </div>
 
               <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
@@ -38,7 +40,10 @@ export default function SecondarySection() {
                   <Image src={Community} width={'60'} height={'60'} />
                 </div>
                 <h1 className="text-xl font-semibold">Communities</h1>
-                <p className="text-lg text-neutral-400">Various amount of groups.</p>
+                <p className="text-lg text-neutral-400">
+                  Various amount of groups for you to join. Want to create one yourself? Go ahead!
+                  The possibilities are endless.
+                </p>
               </div>
 
               <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>

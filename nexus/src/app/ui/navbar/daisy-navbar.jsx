@@ -1,7 +1,7 @@
 // 'use client'
 import Link from "next/link";
 import { getServerSession } from "next-auth";
-import { signOut } from "next-auth/react"
+import NavLinks from "@/app/dashboard/ui/nav-links";
 import LoggedIn from "@/app/ui/user-session/logged-in"
 
 
@@ -14,21 +14,21 @@ export default async function Navbar() {
                 <a className="btn btn-ghost text-xl" href="/">Nexus</a>
             </div>
 
-            <div className="flex flex-grow">
+            <div className="flex-none">
                 <div className="">
-                    <a className="btn btn-ghost btn-md text-lg" href="/community">Communities</a>
+                    <Link className="btn btn-ghost btn-md text-lg" href="/community">Learn</Link>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost btn-md text-lg" href="/marketplace">Marketplace</a>
+                    <Link className="btn btn-ghost btn-md text-lg" href="/marketplace">Communities</Link>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost btn-md text-lg" href="/jobs">Learn</a>
+                    <Link className="btn btn-ghost btn-md text-lg" href="/jobs">Marketplace</Link>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost btn-md text-lg" href="/jobs">Jobs</a>
+                    <Link className="btn btn-ghost btn-md text-lg" href="/jobs">Jobs</Link>
                 </div>
                 <div className="">
-                    <a className="btn btn-ghost btn-md text-lg" href="/mission">Our Mission</a>
+                    <Link className="btn btn-ghost btn-md text-lg" href="/mission">Our Mission</Link>
                 </div>
             </div>
 

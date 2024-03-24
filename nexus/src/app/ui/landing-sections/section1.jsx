@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { oxanium } from "@/app/ui/fonts";
-import { Icon } from '@iconify-icon/react';
+// import { Icon } from '@iconify-icon/react';
+import { motion } from "framer-motion"
 import "animate.css/animate.min.css";
 import "react-daisyui"
 
