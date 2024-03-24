@@ -10,11 +10,13 @@ import "animate.css/animate.min.css";
 import "react-daisyui"
 
 
+
  
 // export const metadata: Metadata = {
 //   title: 'Nexus | Home',
 // };
 // Icons: https://icons8.com/icons
+// Helpful: https://angrytools.com/gradient/
 
 export default function Home() {
 

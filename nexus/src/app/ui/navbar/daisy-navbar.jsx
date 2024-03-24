@@ -21,9 +21,9 @@ export default async function Navbar() {
                 <div className="">
                     <Link className="text-sm" href="/marketplace">Communities</Link>
                 </div>
-                <div className="">
+                {/* <div className="">
                     <Link className="text-sm" href="/jobs">Marketplace</Link>
-                </div>
+                </div> */}
                 <div className="">
                     <Link className="text-sm" href="/jobs">Jobs</Link>
                 </div>
