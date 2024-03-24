@@ -1,5 +1,7 @@
 
-import { oxanium, roboto } from "@/app/ui/fonts";
+import { oxanium, roboto, inter } from "@/app/ui/fonts";
+import Image from "next/image"
+import Community from "../../../../public/assets-image/icons8-user-groups.gif"
 
 
 import Link from "next/link"
@@ -10,19 +12,41 @@ export default function SecondarySection() {
     
 
     return ( 
-        <section className={`${roboto.className} flex flex-col h-svh`}>
+        <section className={`${inter.className} flex flex-col h-svh`}>
           <div className="flex flex-col">
             
-            <div className="flex justify-center pb-4 text-4xl">
-                  <h1 className="font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-black">What is Nexus?</h1>
-                </div>
+              <div className="flex justify-center pb-8 text-4xl">
+                    <h1 className="font-bold text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-black">What is Nexus?</h1>
+              </div>
+
             </div>
 
-            <div className="flex flex-row px-4">
+            <div className="grid grid-cols-3 justify-items gap-4 px-8">
 
-              <div className={` rounded-lg bg-neutral-200 p-4 text-3xl`}>
-                <h1>Market</h1>
-                <p className="text-2xl">It's a Market.</p>
+              
+
+              <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
+                <div className="flex justify-center pb-4">
+                  <Image src={Community} width={'60'} height={'60'} />
+                </div>
+                <h1 className="text-xl font-semibold">Communities</h1>
+                <p className="text-lg text-neutral-400">Various amount of groups.</p>
+              </div>
+
+              <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
+                <div className="flex justify-center pb-4">
+                  <Image src={Community} width={'60'} height={'60'} />
+                </div>
+                <h1 className="text-xl font-semibold">Communities</h1>
+                <p className="text-lg text-neutral-400">Various amount of groups.</p>
+              </div>
+
+              <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
+                <div className="flex justify-center pb-4">
+                  <Image src={Community} width={'60'} height={'60'} />
+                </div>
+                <h1 className="text-xl font-semibold">Communities</h1>
+                <p className="text-lg text-neutral-400">Various amount of groups.</p>
               </div>
 
 
