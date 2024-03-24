@@ -16,10 +16,10 @@ export default async function Navbar() {
 
             <div className="flex-1 space-x-5 text-neutral-500">
                 <div className="">
-                    <Link className="text-sm" href="/community">Learn</Link>
+                    <Link className="text-sm" href="/learn">Learn</Link>
                 </div>
                 <div className="">
-                    <Link className="text-sm" href="/marketplace">Communities</Link>
+                    <Link className="text-sm" href="/community">Communities</Link>
                 </div>
                 {/* <div className="">
                     <Link className="text-sm" href="/jobs">Marketplace</Link>
