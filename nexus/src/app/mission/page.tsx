@@ -1,13 +1,14 @@
+'use client'
 import type { Metadata } from "next";
 import { oxanium, roboto } from "../ui/fonts";
 
 
 import Link from "next/link"
 
-export const metadata: Metadata = {
-    title: "Nexus | Our Mission",
-    // description: "A home for developers, market for recruiters. Whether you're a beginner, or senior level developer, you can find your place here at Nexus.",
-  };
+// export const metadata: Metadata = {
+//     title: "Nexus | Our Mission",
+//     // description: "A home for developers, market for recruiters. Whether you're a beginner, or senior level developer, you can find your place here at Nexus.",
+//   };
 
 
 

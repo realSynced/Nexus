@@ -2,14 +2,17 @@
 import { oxanium, roboto, inter } from "@/app/ui/fonts";
 import Image from "next/image"
 import Community from "../../../../public/assets-image/icons8-user-groups.gif"
-
+import { useScroll } from "framer-motion"
 
 import Link from "next/link"
 
 
 
 export default function SecondarySection() {
-    
+    useScroll({
+      target: '',
+      offset: ["0 1"]
+    })
 
     return ( 
         <section className={`${inter.className} flex flex-col h-svh`}>
@@ -22,7 +25,7 @@ export default function SecondarySection() {
             </div>
 
             <div className="grid grid-cols-3 justify-items gap-4 px-8">
-
+              
               
 
               <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
@@ -50,8 +53,10 @@ export default function SecondarySection() {
                 <div className="flex justify-center pb-4">
                   <Image src={Community} width={'60'} height={'60'} />
                 </div>
-                <h1 className="text-xl font-semibold">Communities</h1>
-                <p className="text-lg text-neutral-400">Various amount of groups.</p>
+                <h1 className="text-xl font-semibold">Finding Gigs and Jobs</h1>
+                <p className="text-lg text-neutral-400">
+                  The market has never been so demanding for your work! With our job finding algorithm, say goodbye to boredom and joblessness.
+                </p>
               </div>
 
 
