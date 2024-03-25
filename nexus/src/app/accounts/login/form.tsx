@@ -3,6 +3,7 @@
 import { FormEvent } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react"
 
 
 
@@ -22,8 +23,14 @@ export default function Form(){
         if(!response?.error){
             router.push("/profile");
             router.refresh();
+        }else{
+            alert(response.error)
         }
     }
+
+    const [username, setUsername] = useState<string | null>(null);
+    const [email, setEmail] = useState<string | null>(null);
+    const [userData, setUserData] = useState<{username: string, email: string} | null>(null);
 
 
     return(
