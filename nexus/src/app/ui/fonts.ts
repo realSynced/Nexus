@@ -1,4 +1,4 @@
-import { Inter, Roboto, Roboto_Condensed ,Roboto_Mono, Oxanium, Sen } from 'next/font/google'
+import { Inter, Roboto, Roboto_Condensed ,Roboto_Mono, Oxanium } from 'next/font/google'
  
 export const inter = Inter({
   subsets: ['latin'],
@@ -24,10 +24,4 @@ export const oxanium = Oxanium({
     subsets: ['latin'],
     display: 'swap',
     weight: '500'
-})
-
-export const sen = Sen({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '500'
 })

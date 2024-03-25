@@ -6,11 +6,11 @@ import { useSession } from "next-auth/react"
 
 
 export default function Profile() {
-  const { data: session, status } = useSession()
+  // const { data: session, status } = useSession()
   const [username, setUsername] = useState("Loading");
   
   useEffect(() => {
-    fetch("/api/userdata").then(
+    fetch(`/api/userdata?email=${session?.user?.email}`).then(
       response => response.json()
     ).then(
       data => {

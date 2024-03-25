@@ -1,9 +1,8 @@
 
-import { oxanium, roboto, inter } from "@/app/ui/fonts";
+import { roboto, inter } from "@/app/ui/fonts";
 import Image from "next/image"
 import Community from "../../../../public/assets-image/icons8-user-groups.gif"
 import FadeInWhenVisible from "@/app/ui/components/FadeIn"
-import { motion, useScroll } from "framer-motion"
 
 import Link from "next/link"
 
@@ -33,7 +32,7 @@ export default function SecondarySection() {
               <FadeInWhenVisible>
                 <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`} >
                   <div className="flex justify-center pb-4">
-                    <Image src={Community} width={'60'} height={'60'} alt="gif" />
+                    <Image src={Community} width={'60'} height={'60'} alt="gif" unoptimized/>
                   </div>
                   <h1 className="text-xl font-semibold">Courses</h1>
                   <p className="text-lg text-neutral-400">
@@ -45,7 +44,7 @@ export default function SecondarySection() {
               <FadeInWhenVisible>
                 <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
                   <div className="flex justify-center pb-4">
-                    <Image src={Community} width={'60'} height={'60'} alt="gif" />
+                    <Image src={Community} width={'60'} height={'60'} alt="gif" unoptimized/>
                   </div>
                   <h1 className="text-xl font-semibold">Communities</h1>
                   <p className="text-lg text-neutral-400">
@@ -58,7 +57,7 @@ export default function SecondarySection() {
               <FadeInWhenVisible>
                 <div className={`rounded-lg p-4 drop-shadow-sm border border-gray`}>
                   <div className="flex justify-center pb-4">
-                    <Image src={Community} width={'60'} height={'60'} alt="gif" />
+                    <Image src={Community} width={'60'} height={'60'} alt="gif" unoptimized/>
                   </div>
                   <h1 className="text-xl font-semibold">Finding Gigs and Jobs</h1>
                   <p className="text-lg text-neutral-400">

@@ -23,7 +23,7 @@ export default function MainSection() {
               <div className="flex flex-col space-x-10">
                 <div className="">
                     <div className="flex px-80  ">
-                        <h1 className=" font-bold drop-shadow-sm p-4 text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-black">A home for developers, market for recruiters</h1>
+                        <h1 className="font-bold drop-shadow-sm p-4 text-transparent bg-clip-text bg-gradient-to-b from-gray-600 to-black">A home for developers, market for recruiters</h1>
                       </div>
                     <div className="">
                       <p className="text-2xl ">Learn. Create. Explore.</p>
