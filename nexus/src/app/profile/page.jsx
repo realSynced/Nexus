@@ -10,7 +10,7 @@ export default function Profile() {
   const [username, setUsername] = useState("Loading");
   
   useEffect(() => {
-    fetch(`/api/userdata?email=${session?.user?.email}`).then(
+    fetch(`/api/userdata?email=john@example.com`).then(
       response => response.json()
     ).then(
       data => {

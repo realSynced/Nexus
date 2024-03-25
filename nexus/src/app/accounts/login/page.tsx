@@ -10,10 +10,8 @@ export default async function LoginPage() {
   if(session){
     
     redirect("/profile");
-    // return (<Navbar state={session} />)
   }
   return (<>
-    {/* <Navbar/> */}
     <Form />
   </>);
 }

@@ -3,6 +3,7 @@
 import { FormEvent } from "react";
 import { handleSave } from "@/global/functionality/storing";
 import { useState, useEffect } from "react";
+import { signIn } from "next-auth/react";
 
 
 export default function Form(){
@@ -39,6 +40,11 @@ export default function Form(){
         e.preventDefault();
         setErrors(validateValues(inputFields));
         setSubmitting(true);
+
+        if (Object.keys(errors).length === 0 && submitting) {
+            handleSave(email, username);
+            handleSubmitData(e);
+        }
     }
 
     const handleSubmitData = async (e) => {
@@ -56,18 +62,33 @@ export default function Form(){
         
         console.log('Form submitted:', formData);
         console.log({ response })
+
+        const responses = await signIn('credentials', {
+            email: formData.get('email'),
+            password: formData.get('password'),
+            redirect: false,
+          });
+          // console.log({ response })
+          // console.log("testt")
+  
+          if(!responses?.error){
+              router.push("/profile");
+              router.refresh();
+          }else{
+              alert(responses.error)
+          }
     }
 
 
-    const finishSubmit = () => {
-        handleSubmitData()
-    };
+    // const finishSubmit = () => {
+    //     handleSubmitData()
+    // };
      
-      useEffect(() => {
-        if (Object.keys(errors).length === 0 && submitting) {
-          finishSubmit();
-        }
-    }, [errors]);
+    //   useEffect(() => {
+    //     if (Object.keys(errors).length === 0 && submitting) {
+    //       finishSubmit();
+    //     }
+    // }, [errors]);
 
     
 

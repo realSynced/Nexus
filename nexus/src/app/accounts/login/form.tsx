@@ -5,6 +5,8 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react"
 
+import { handleSave } from "@/global/functionality/storing";
+
 
 
 export default function Form(){
@@ -17,6 +19,8 @@ export default function Form(){
           password: formData.get('password'),
           redirect: false,
         });
+        
+        
         // console.log({ response })
         // console.log("testt")
 
@@ -27,10 +31,6 @@ export default function Form(){
             alert(response.error)
         }
     }
-
-    const [username, setUsername] = useState<string | null>(null);
-    const [email, setEmail] = useState<string | null>(null);
-    const [userData, setUserData] = useState<{username: string, email: string} | null>(null);
 
 
     return(
