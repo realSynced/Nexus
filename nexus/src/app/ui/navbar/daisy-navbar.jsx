@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { inter, roboto } from "@/app/ui/fonts"
-import NavLinks from "@/app/dashboard/ui/nav-links";
+// import NavLinks from "@/app/dashboard/ui/nav-links";
 import LoggedIn from "@/app/ui/user-session/logged-in"
 
 
