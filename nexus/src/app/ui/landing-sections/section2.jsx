@@ -7,7 +7,6 @@ import FadeInWhenVisible from "@/app/ui/components/FadeIn"
 import Link from "next/link"
 
 
-
 export default function SecondarySection() {
     
   // const scrollRef = useRef(null)
