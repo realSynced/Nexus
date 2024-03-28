@@ -7,11 +7,11 @@ export default function Learn() {
   
 
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="h-lvh">
         
         <Section1/>
         
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     );
   }

@@ -5,9 +5,9 @@ import { inter } from "@/app/ui/fonts"
 
 export default function Section1() {
     return (
-        <div className={``}>
-            <div className="flex flex-col h-svh">
-                <div className="flex justify-center mb-14">
+        <div className={`h-full grow`}>
+            <div className="">
+                <div className="flex justify-center my-14">
                     <h1 className="font-bold text-4xl ">Courses</h1>
                 </div>
                 
@@ -25,10 +25,6 @@ export default function Section1() {
                     <Card name="HTML" enrolled="200" link="" />
                     <Card name="CSS" enrolled="200" link="" />
                     <Card name="JavaScript" enrolled="200" link="" />
-                    <Card name="HTML" enrolled="200" link="" />
-                    <Card name="HTML" enrolled="200" link="" />
-                    <Card name="HTML" enrolled="200" link="" />
-                    <Card name="HTML" enrolled="200" link="" />
                     <Card name="HTML" enrolled="200" link="" />
                     <Card name="HTML" enrolled="200" link="" />
                     <Card name="HTML" enrolled="200" link="" />
