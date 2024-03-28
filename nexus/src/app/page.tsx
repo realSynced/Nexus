@@ -16,7 +16,7 @@ export default function Home() {
 
  
   return (
-    <div className="flex flex-col bg slategray min-h-screen">
+    <div className="flex flex-col bg-slategray min-h-screen">
         <MainSection/>
         <SecondarySection/>
         <Footer/>

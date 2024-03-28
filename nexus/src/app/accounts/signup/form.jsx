@@ -72,7 +72,7 @@ export default function Form(){
           // console.log("testt")
   
           if(!responses?.error){
-              router.push("/profile");
+              router.push("/accounts/get-started");
               router.refresh();
           }else{
               alert(responses.error)

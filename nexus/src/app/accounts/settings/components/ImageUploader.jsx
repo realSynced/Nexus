@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 
 const ImageUploader = () => {
-  const [image, setImage] = useState(null);
   const [error, setError] = useState('');
 
   const handleImageUpload = (e) => {
@@ -17,7 +16,10 @@ const ImageUploader = () => {
     }
 
     reader.onload = () => {
-      setImage(reader.result);
+      // setImage(reader.result);
+
+      {/* Implement lazy load */}
+      
       // Here you can store the image in localStorage, database, or wherever you need
       // For this example, let's just log the image data
       console.log(reader.result);
@@ -31,13 +33,14 @@ const ImageUploader = () => {
   return (
     <div>
       <input type="file" accept="image/*" onChange={handleImageUpload} />
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+       {error && <p style={{ color: 'red' }}>{error}</p>}
+      {/*
       {image && (
         <div>
           <h2>Uploaded Image:</h2>
           <img src={image} alt="Uploaded" style={{ maxWidth: '100%' }} />
         </div>
-      )}
+      )} */}
     </div>
   );
 };

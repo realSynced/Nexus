@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { oxanium, sen } from "@/app/ui/fonts";
 
 
 export default function SideNav() {

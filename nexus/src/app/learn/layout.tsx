@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import SideNav from "@/app/learn/ui/components/sidenav";
+import Footer from "@/app/ui/components/Footer"
 
 
 export const metadata: Metadata = {
@@ -12,14 +13,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
     
       {/* <Navbar/> */}
-      <div className="flex h-full flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row overflow-y-hidden">
         <div className="w-full flex-none md:w-64">
           <SideNav />
         </div>
         <div className="grow pr-2">{children}</div>
-
       </div>
-    
+      <Footer></Footer>
     </>
   );
 }
